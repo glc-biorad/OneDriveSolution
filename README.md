@@ -4,6 +4,9 @@ OneDrive interaction with python interface
 # Current State:
 A OneDrive class can be used to free up space and write to disk from OneDrive.
 
+# Notes:
+- Currently haven't tested on Windows machine, need to uncomment the subprocess run command.
+
 # Goals:
 - Free up space on the local disk and move the file(s) to OneDrive.
 - Download file(s) from OneDrive to the local machine.
