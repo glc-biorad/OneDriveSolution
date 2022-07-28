@@ -1,3 +1,4 @@
+import sys
 import subprocess
 import os
 
@@ -7,6 +8,7 @@ class OneDrive():
 	def __init__(self, path=None):
 		if path != None:
 			self.path = utility.create_raw_string(path)
+			print(self.path)
 		else:
 			self.path = None
 
@@ -21,8 +23,8 @@ class OneDrive():
 		for _fpath in fpaths:
 			if only_ext != None and _fpath[-len(only_ext):] != only_ext:
 				continue
-			print(_fpath)
-			#subprocess.run('attrib +U -P "' + _fpath + '"')
+			print(f"To OneDrive: {_fpath}")
+			subprocess.run('attrib +U -P "' + _fpath + '"')
 	
 	# To disk
 	def to_disk(self, path=None, fname=None, only_ext=None):
